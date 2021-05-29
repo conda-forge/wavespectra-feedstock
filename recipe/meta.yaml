@@ -1,5 +1,5 @@
 {% set name = "wavespectra" %}
-{% set version = "3.8.1" %}
+{% set version = "3.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9f1fbca1cb18444c6f2da2f752f521addbb7d9fd8cae5ebaa5267eb601ebf4ed
-  
+  sha256: 60b9a780eba60a03f34bc5cb0e4dac13ae5e76a95e83d8d3f00cc7cd6c037584
+
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -47,7 +47,7 @@ requirements:
 
 test:
   imports:
-     - wavespectra
+    - wavespectra
   commands:
     - pip check
   requires:
@@ -58,7 +58,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Python library for ocean wave spectra'
+  summary: Python library for ocean wave spectra
   description: |
     Wavespectra is an open source project for working with ocean wave spectral data. 
     The library is built on top of xarray, leveraging from xarray’s labelled 
