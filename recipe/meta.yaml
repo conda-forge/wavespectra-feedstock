@@ -19,12 +19,12 @@ requirements:
     # Compilers are named 'c', 'cxx' and 'fortran'.
     - {{ compiler('fortran') }}
   host:
-    - python
+    - python >=3.8,<3.12
     - pip
     - numpy
     - pytest-runner
   run:
-    - python
+    - python >=3.8,<3.12
     - click
     - cmocean
     - dask
