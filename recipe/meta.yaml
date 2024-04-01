@@ -37,6 +37,7 @@ requirements:
     - pyyaml
     - sortedcontainers
     - scipy
+    - typing_extensions
     - toolz
     - xarray
     - numba
