@@ -1,5 +1,5 @@
 {% set name = "wavespectra" %}
-{% set version = "3.18.0" %}
+{% set version = "3.19.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b527e2aa6b0f500db34aa10a55efe489561fe99c66256be023467c54410377d3
+  sha256: e0066328ee8272565ba35ee5b7569ea8ca3e4f8fb1c61f011d7da062e3c10a53
 
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     # Compilers are named 'c', 'cxx' and 'fortran'.
     - {{ compiler('fortran') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
