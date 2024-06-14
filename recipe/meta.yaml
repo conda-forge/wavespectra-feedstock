@@ -11,7 +11,8 @@ source:
 
 
 build:
-  number: 1
+  noarch: python
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,12 +21,12 @@ requirements:
     - {{ compiler('fortran') }}
     - {{ stdlib("c") }}
   host:
-    - python
+    - python >=3.8,<3.12
     - pip
     - numpy
     - pytest-runner
   run:
-    - python
+    - python >=3.8,<3.12
     - click
     - cmocean
     - dask
@@ -38,6 +39,7 @@ requirements:
     - pyyaml
     - sortedcontainers
     - scipy
+    - typing_extensions
     - toolz
     - xarray
     - numba
