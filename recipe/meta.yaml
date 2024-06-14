@@ -17,7 +17,7 @@ build:
 requirements:
   build:
     # Compilers are named 'c', 'cxx' and 'fortran'.
-    - {{ compiler('fortran') }}
+    - {{ compiler("c") }}
     - {{ stdlib("c") }}
   host:
     - python
@@ -27,23 +27,21 @@ requirements:
   run:
     - python
     - click
-    - cmocean
     - dask
     - gcsfs
     - fsspec
+    - h5netcdf
     - matplotlib-base
     - numpy
+    - netCDF4
     - pandas
     - python-dateutil
     - pyyaml
     - sortedcontainers
     - scipy
-    - toolz
     - xarray
-    - numba
     - zarr
     - attrdict
-    - decorator
     - importlib-metadata
 
 test:
