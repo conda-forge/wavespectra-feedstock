@@ -17,7 +17,7 @@ build:
 requirements:
   build:
     # Compilers are named 'c', 'cxx' and 'fortran'.
-    - {{ compiler("c") }}
+    - {{ compiler('fortran') }}
     - {{ stdlib("c") }}
   host:
     - python
