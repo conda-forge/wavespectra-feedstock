@@ -16,8 +16,7 @@ build:
 
 requirements:
   build:
-    # Compilers are named 'c', 'cxx' and 'fortran'.
-    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
@@ -33,17 +32,14 @@ requirements:
     - fsspec
     - matplotlib-base
     - numpy
+    - netcdf4
     - pandas
     - python-dateutil
     - pyyaml
     - sortedcontainers
     - scipy
-    - toolz
     - xarray
-    - numba
     - zarr
-    - attrdict
-    - decorator
     - importlib-metadata
 
 test:
@@ -62,8 +58,8 @@ about:
   summary: Python library for ocean wave spectra
   description: |
     Wavespectra is an open source project for working with ocean wave spectral data. 
-    The library is built on top of xarray, leveraging from xarray’s labelled 
-    multi-dimensional arrays and making dealing with wave spectra simple and fast..
+    The library is built on top of xarray, leveraging from xarray labelled 
+    multi-dimensional arrays and making dealing with wave spectra simple and fast.
   doc_url: https://wavespectra.readthedocs.io/en/latest/
   dev_url: https://github.com/wavespectra/wavespectra
 
