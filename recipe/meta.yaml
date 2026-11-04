@@ -1,5 +1,5 @@
 {% set name = "wavespectra" %}
-{% set version = "4.9.0" %}
+{% set version = "4.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7ef58090ecd440249c233f61961f204e4b1b62f451f6bdcc9fe98829ca037d97
+  sha256: c76c0a831ad54d11af0173a6b118319d60b215a9e7da1014e5fc8a7fdb9204f0
 
 
 build:
